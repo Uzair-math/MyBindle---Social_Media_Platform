@@ -1,0 +1,361 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+    :root {
+      --primary: #FF5349;
+      --gradient: linear-gradient(135deg, #FF5349, #FF5349);
+    }
+
+    /*  Base Styles  */
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    /* ============= Buttons ======== */
+    .btn-custom {
+      color: #FF5349 !important;
+      background: #fff !important;
+      border: none !important;
+    }
+
+    .custom-btn {
+      color: #FF5349;
+      border-radius: 0;
+      background-color: transparent;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .custom-btn:hover {
+      background-color: #FF5349;
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .get-started-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 20px 40px rgba(255, 51, 102, 0.5) !important;
+    }
+
+    /* ========== Typography =========== */
+    .text-gradient {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+
+    .para {
+      width: 100%;
+      font-size: 16px;
+      text-align: start;
+    }
+
+    /* ============== Layout & Containers ========== */
+    .main-section {
+      max-width: 1380px;
+      margin: 0 auto;
+      border-radius: 20px;
+      height: auto;
+      min-height: 510px;
+    }
+
+    .hero-wrapper {
+      gap: 20px;
+    }
+
+    /* .logo-container {
+      margin-top: 93px !important;
+      height: 70px !important;
+      width: 303px !important;
+      margin: 8px auto;
+    } */
+     .logo-container {
+  margin-top: 0px; 
+  height: 70px !important;
+  width: 303px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+    .logo-container img {
+      max-width: 100%;
+    }
+
+    /*======== Sections ============== */
+    .hero, .donation, .final-cta {
+      background: var(--gradient);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      min-height: 1042px;
+      height: auto;
+      opacity: 1;
+      padding: 2rem 0;
+    }
+
+    .final-cta {
+      background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4') center/cover no-repeat;
+      position: relative;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #FF5349;
+      z-index: 1;
+    }
+
+    /* ===================== Cards */
+    .feature-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 25px 50px rgba(255, 51, 102, 0.2);
+    }
+
+    .feature-card1 {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    /* ===================== Images  */
+    .custom-img {
+      width: 100%;
+      max-width: 580px;
+      padding: 0;
+    }
+
+    /* ===================== Utility & Extras */
+    .rounded-shadow {
+      border-radius: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+
+    .step-circle {
+      width: 90px;
+      height: 90px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin: 0 auto 20px;
+      box-shadow: 0 10px 30px #FF5349;
+    }
+
+    .z-3 { z-index: 3; }
+
+    /* ===================== Tablet Specific Styles*/
+    @media (min-width: 768px) and (max-width: 992px) {
+      /* Hero Section Fixes */
+      .hero {
+        min-height: 800px;
+        height: auto;
+        padding: 3rem 0;
+      }
+      
+      .hero .display-3 {
+        font-size: 2.8rem;
+        text-align: center !important;
+      }
+      
+      .hero .lead {
+        width: 100% !important;
+        text-align: center !important;
+        font-size: 1.1rem;
+      }
+      
+      .hero .btn {
+        float: none !important;
+        margin: 0 auto !important;
+        display: block !important;
+        width: fit-content;
+      }
+      
+      .hero-phone img {
+        max-width: 400px;
+        margin: 2rem auto 0 !important;
+      }
+      
+      /* Donation Section Fixes */
+      .donation.main-section {
+        height: auto;
+        padding: 3rem 1.5rem !important;
+      }
+      
+      .donation .display-4 {
+        font-size: 2.5rem !important;
+        text-align: center;
+      }
+      
+      .donation .para {
+        text-align: center;
+        font-size: 1.1rem;
+      }
+      
+      .donation .btn {
+        margin: 0 auto !important;
+        display: block !important;
+        width: fit-content;
+      }
+      
+      .donation .row.align-items-center {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .donation img {
+        max-width: 250px;
+        margin: 1rem auto;
+      }
+      
+      /* Final CTA Section Fixes */
+      .donation:last-child .display-4 {
+        font-size: 2.5rem !important;
+        text-align: center;
+      }
+      
+      .donation:last-child .para {
+        text-align: center;
+      }
+      
+      .donation:last-child .d-flex.justify-content-start {
+        justify-content: center !important;
+      }
+      
+      .donation:last-child img {
+        max-width: 200px;
+        margin: 1rem auto;
+      }
+    }
+
+    /* ===================== Mobile Styles ===================== */
+    @media (max-width: 767px) {
+      .hero-wrapper {
+        flex-direction: column !important;
+        text-align: center !important;
+      }
+
+      .hero-wrapper .col-lg-6 {
+        width: 100% !important;
+      }
+
+      .hero-wrapper p {
+        width: 100% !important;
+        text-align: center !important;
+      }
+
+      .hero-wrapper a {
+        float: none !important;
+        margin: 0 auto !important;
+        display: inline-block !important;
+      }
+
+      .hero-phone img {
+        width: 90% !important;
+        margin: 20px auto 0 !important;
+        display: block !important;
+      }
+
+      .logo-container img {
+        padding: 30px !important;
+      }
+      
+      .main-section {
+        height: auto;
+        padding: 2rem 0;
+      }
+      
+      .hero {
+        height: auto;
+        padding: 2rem 0;
+      }
+      
+      .display-3 {
+        font-size: 2.5rem;
+      }
+      
+      .display-4, .display-5 {
+        font-size: 2rem;
+      }
+      
+      .hero-phone img {
+        width: 70% !important;
+      }
+      
+      .donation .row.align-items-center {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .donation .display-4 {
+        text-align: center !important;
+      }
+      
+      .donation .para {
+        text-align: center !important;
+      }
+      
+      .donation .d-flex.justify-content-start {
+        justify-content: center !important;
+      }
+    }
+    
+/* Large screens (992px ≤ width < 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .logo-container {
+    margin-top: 93px !important;
+  }
+}
+
+/* Extra large screens (1200px ≤ width < 1400px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .logo-container {
+    margin-top: 90px !important;
+  }
+}
+
+/* Extra extra large screens (1400px and above) */
+@media (min-width: 1400px) {
+  .logo-container {
+    margin-top: 90px !important;
+  }
+}
+
+    /* ===================== Large Desktop Styles ===================== */
+    @media (min-width: 1200px) {
+      .hero {
+        height: 1042px;
+      }
+      
+      .main-section {
+        height: 510px;
+      }
+    }
